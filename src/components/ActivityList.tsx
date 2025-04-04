@@ -20,10 +20,10 @@ export const ActivityList = () => {
           <Award className="w-4 h-4 text-[#F7A61C]" />
         </Link>
         
-        <Link to="/counsellor" className="text-sm gap-2.5 h-10 border px-[15px] rounded-[20px] border-[#E1E1E1] flex items-center hover:border-[#F7A61C] hover:bg-[#F7A61C]/5 transition-all">
-          <User className="w-4 h-4 text-gray-500" />
+        <Link to="/counsellor" className="text-sm gap-2.5 h-10 border px-[15px] rounded-[20px] border-[#E1E1E1] flex items-center hover:border-[#F7A61C] hover:bg-[#F7A61C]/5 transition-all group">
+          <User className="w-4 h-4 text-gray-500 group-hover:text-[#F7A61C]" />
           <span>No counsellor assigned</span>
-          <ChevronRight className="w-4 h-4 text-gray-400" />
+          <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-[#F7A61C] group-hover:translate-x-1 transition-transform" />
         </Link>
         
         <Link to="/auth" className="h-10 bg-[#022859] hover:bg-[#033a7a] text-sm font-semibold text-white px-5 rounded-[20px] transition-colors flex items-center">
