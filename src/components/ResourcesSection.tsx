@@ -1,5 +1,6 @@
 
 import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
 
 export const ResourcesSection = () => {
   const resources = [
@@ -10,33 +11,27 @@ export const ResourcesSection = () => {
   ];
 
   return (
-    <section className="px-[136px] py-10 max-md:px-10 max-sm:px-5">
-      <h2 className="text-[32px] font-semibold text-center mb-3.5">
+    <section className="px-[136px] py-14 max-md:px-10 max-sm:px-5 bg-white">
+      <h2 className="text-[32px] font-semibold text-center mb-3.5 text-[#333]">
         Resources for you
       </h2>
-      <p className="text-2xl text-center mb-[60px]">
+      <p className="text-xl text-center mb-[60px] text-[#666]">
         Learn the process in simple steps with these guides handpicked for you
       </p>
       <div className="flex gap-[30px] justify-center flex-wrap">
         {resources.map((resource, index) => (
-          <div
-            key={index}
-            className="w-[210px] h-[210px] bg-white border shadow-[0px_4px_4px_rgba(0,0,0,0.25)] flex items-center justify-center rounded-full border-solid border-[#E1E1E1]"
-          >
-            {/* Using placeholder images since URL_10, etc. are not valid */}
-            <img
-              src={`https://placehold.co/79x90?text=${resource.title}`}
-              alt={resource.title}
-              className="w-[79px] h-[90px]"
-            />
-          </div>
-        ))}
-      </div>
-      <div className="flex gap-[30px] justify-center text-xl text-center mt-[30px]">
-        {resources.map((resource, index) => (
-          <div key={index} className="w-44">
-            {resource.title}
-          </div>
+          <Card key={index} className="w-[210px] border-none shadow-md hover:shadow-lg transition-shadow duration-300">
+            <CardContent className="flex flex-col items-center p-8">
+              <div className="w-[120px] h-[120px] bg-blue-50 rounded-full flex items-center justify-center mb-4">
+                <img
+                  src={`https://placehold.co/79x90?text=${resource.title}`}
+                  alt={resource.title}
+                  className="w-[79px] h-[90px]"
+                />
+              </div>
+              <h3 className="text-lg font-medium text-center text-[#333]">{resource.title}</h3>
+            </CardContent>
+          </Card>
         ))}
       </div>
     </section>

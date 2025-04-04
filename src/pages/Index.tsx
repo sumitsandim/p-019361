@@ -59,13 +59,14 @@ const Index = () => {
 
   return (
     <div className="bg-[#F5F5F5] min-h-screen">
-      <div className="container mx-auto py-10 px-5">
+      <div className="container mx-auto py-6 px-5">
         <HeroSection />
-        <div className="mt-10 flex justify-center">
+        
+        <div className="mt-8 flex justify-center">
           <ActivityList />
         </div>
         
-        <div className="mt-16">
+        <div className="mt-16 bg-white py-10 rounded-lg shadow-sm">
           <PopularGuides />
         </div>
         
@@ -73,9 +74,9 @@ const Index = () => {
           <ExamGuides />
         </div>
         
-        <div className="mt-16 px-[136px] max-md:px-10 max-sm:px-5">
-          <h2 className="text-[32px] font-semibold mb-6">Articles for you</h2>
-          <div className="flex gap-5 overflow-x-auto pb-5 max-md:flex-wrap">
+        <div className="mt-16 px-[136px] max-md:px-10 max-sm:px-5 bg-white py-10 rounded-lg shadow-sm">
+          <h2 className="text-[32px] font-semibold mb-8 text-[#333]">Articles for you</h2>
+          <div className="flex gap-6 overflow-x-auto pb-5 max-md:flex-wrap">
             {articles.map((article, index) => (
               <ArticleCard 
                 key={index}
@@ -88,9 +89,9 @@ const Index = () => {
           </div>
         </div>
         
-        <div className="mt-16 px-[136px] max-md:px-10 max-sm:px-5">
-          <h2 className="text-[32px] font-semibold mb-6">Scholarships for you</h2>
-          <div className="flex gap-5 overflow-x-auto pb-5 max-md:flex-wrap">
+        <div className="mt-16 px-[136px] max-md:px-10 max-sm:px-5 bg-white py-10 rounded-lg shadow-sm">
+          <h2 className="text-[32px] font-semibold mb-8 text-[#333]">Scholarships for you</h2>
+          <div className="flex gap-6 overflow-x-auto pb-5 max-md:flex-wrap">
             {scholarships.map((scholarship, index) => (
               <ScholarshipCard 
                 key={index}
