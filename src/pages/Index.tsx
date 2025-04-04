@@ -58,7 +58,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="bg-[#F5F5F5]">
+    <div className="bg-[#F5F5F5] min-h-screen">
       <div className="container mx-auto py-10 px-5">
         <HeroSection />
         <div className="mt-10 flex justify-center">
