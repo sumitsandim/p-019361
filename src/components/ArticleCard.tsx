@@ -21,7 +21,7 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({
   return (
     <Link 
       to={`/articles/${slug || title.toLowerCase().replace(/\s+/g, '-')}`}
-      className="block w-[376px] h-[400px] bg-white border overflow-hidden rounded-[20px] border-[#E1E1E1] hover:shadow-lg transition-all duration-300 hover:translate-y-[-5px]"
+      className="block w-full max-w-[376px] h-auto bg-white border overflow-hidden rounded-[20px] border-[#E1E1E1] hover:shadow-lg transition-all duration-300 hover:translate-y-[-5px]"
     >
       <div className="relative h-full">
         <img src={image} alt={title} className="w-full h-[205px] object-cover" />
@@ -30,7 +30,7 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({
           <p className="text-[14px] text-gray-600 mb-4 line-clamp-3">
             Learn about studying opportunities and education system in {title.split(':')[0].trim()}
           </p>
-          <div className="flex items-center justify-between gap-3 absolute bottom-4 left-4 right-4">
+          <div className="flex items-center justify-between gap-3 mt-auto pb-2">
             <div className="flex items-center gap-[3px] text-gray-600">
               <User className="w-3 h-3" />
               <span className="text-xs">{author}</span>
@@ -40,6 +40,9 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({
               <span className="text-xs">{date}</span>
             </div>
           </div>
+          <button className="w-full h-8 bg-[#F7A61C] hover:bg-[#e69400] text-sm font-medium text-white rounded-full transition-colors mt-2">
+            Read More
+          </button>
         </div>
       </div>
     </Link>

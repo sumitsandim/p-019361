@@ -5,7 +5,7 @@ import { Book, Award, User, ChevronRight } from "lucide-react";
 
 export const ActivityList = () => {
   return (
-    <div className="w-[772px] h-auto bg-white shadow-md rounded-[10px] p-5 max-md:w-full hover:shadow-lg transition-shadow">
+    <div className="w-full max-w-[772px] bg-white shadow-md rounded-[20px] p-5 hover:shadow-lg transition-shadow">
       <h2 className="text-2xl font-semibold mb-5 text-[#333]">List of your activity</h2>
       <div className="flex gap-[15px] flex-wrap">
         <Link to="/my-courses" className="flex items-center gap-2.5 h-10 border px-[15px] rounded-[20px] border-[#E1E1E1] hover:border-[#F7A61C] hover:bg-[#F7A61C]/5 transition-all">

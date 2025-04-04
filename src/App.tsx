@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import Article from "./pages/Article";
 import Scholarship from "./pages/Scholarship";
 import Resource from "./pages/Resource";
+import Counselling from "./pages/Counselling";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/articles/:slug" element={<Article />} />
           <Route path="/scholarships/:slug" element={<Scholarship />} />
           <Route path="/resources/:type" element={<Resource />} />
+          <Route path="/counselling" element={<Counselling />} />
           {/* Routes for navigation menu items will be created as empty placeholders */}
           <Route path="/countries/:country" element={<NotFound />} />
           <Route path="/exams/:exam" element={<NotFound />} />
